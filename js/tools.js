@@ -228,6 +228,17 @@ $(document).ready(function() {
         e.preventDefault();
     });
 
+    $('body').on('click', '[data-href]', function(e) {
+        if (!$(this).hasClass('window-link')) {
+            if ($(this).attr('data-target') == '_blank') {
+                window.open($(this).attr('data-href'));
+            } else {
+                window.location = $(this).attr('data-href');
+            }
+            e.preventDefault();
+        }
+    });
+
 });
 
 $(window).on('load resize', function() {
