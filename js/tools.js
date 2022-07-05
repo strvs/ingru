@@ -54,7 +54,7 @@ $(document).ready(function() {
         }
     });
 
-    $('.page-menu a').click(function(e) {
+    $('.page-menu a, .page-menu-mobile a').click(function(e) {
         var curBlock = $($(this).attr('href'));
         if (curBlock.length == 1) {
             $('html, body').animate({'scrollTop': curBlock.offset().top - $('.header').outerHeight() - 20});
@@ -106,7 +106,15 @@ $(document).ready(function() {
         variableWidth: true,
         prevArrow: '<button type="button" class="slick-prev"><svg><use xlink:href="' + pathTemplate + 'images/sprite.svg#slick-arrow"></use></svg></button>',
         nextArrow: '<button type="button" class="slick-next"><svg><use xlink:href="' + pathTemplate + 'images/sprite.svg#slick-arrow"></use></svg></button>',
-        dots: false
+        dots: false,
+        responsive: [
+            {
+                breakpoint: 1191,
+                    settings: {
+                        arrows: false
+                    }
+            }
+        ]
     });
 
     $('.widgets-others-list').slick({
@@ -115,7 +123,13 @@ $(document).ready(function() {
         slidesToScroll: 3,
         prevArrow: '<button type="button" class="slick-prev"><svg><use xlink:href="' + pathTemplate + 'images/sprite.svg#slick-arrow"></use></svg></button>',
         nextArrow: '<button type="button" class="slick-next"><svg><use xlink:href="' + pathTemplate + 'images/sprite.svg#slick-arrow"></use></svg></button>',
-        dots: false
+        dots: false,
+        responsive: [
+            {
+                breakpoint: 1191,
+                    settings: 'unslick'
+            }
+        ]
     });
 
     $('.service-reviews').slick({
@@ -124,7 +138,19 @@ $(document).ready(function() {
         slidesToScroll: 3,
         prevArrow: '<button type="button" class="slick-prev"><svg><use xlink:href="' + pathTemplate + 'images/sprite.svg#slick-arrow"></use></svg></button>',
         nextArrow: '<button type="button" class="slick-next"><svg><use xlink:href="' + pathTemplate + 'images/sprite.svg#slick-arrow"></use></svg></button>',
-        dots: false
+        dots: false,
+        responsive: [
+            {
+                breakpoint: 1191,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        adaptiveHeight: true,
+                        variableWidth: true,
+                        arrows: false
+                    }
+            }
+        ]
     });
 
     $('.other-projects .main-projects-list').slick({
@@ -133,7 +159,19 @@ $(document).ready(function() {
         slidesToScroll: 2,
         prevArrow: '<button type="button" class="slick-prev"><svg><use xlink:href="' + pathTemplate + 'images/sprite.svg#slick-arrow"></use></svg></button>',
         nextArrow: '<button type="button" class="slick-next"><svg><use xlink:href="' + pathTemplate + 'images/sprite.svg#slick-arrow"></use></svg></button>',
-        dots: false
+        dots: false,
+        responsive: [
+            {
+                breakpoint: 767,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        adaptiveHeight: true,
+                        variableWidth: true,
+                        arrows: false
+                    }
+            }
+        ]
     });
 
     $('.faq-item-title').click(function(e) {
@@ -173,6 +211,20 @@ $(document).ready(function() {
             }
             $('.main-projects-more a').removeClass('loading');
         });
+        e.preventDefault();
+    });
+
+    $('.burger-link').click(function(e) {
+        if ($('html').hasClass('burger-open')) {
+            $('html').removeClass('burger-open');
+            $('.wrapper').css({'top': 'auto'});
+            $(window).scrollTop($('.wrapper').data('curScroll'));
+        } else {
+            var curScroll = $(window).scrollTop();
+            $('html').addClass('burger-open');
+            $('.wrapper').css({'top': -curScroll});
+            $('.wrapper').data('curScroll', curScroll);
+        }
         e.preventDefault();
     });
 
@@ -299,6 +351,80 @@ $(window).on('load resize', function() {
             });
         });
     });
+
+    if ($(window).width() > 1191) {
+        $('.main-achives').each(function() {
+            $('.main-achives').mCustomScrollbar('destroy');
+        });
+
+        $('.main-services-list').each(function() {
+            var curList = $(this);
+            if (curList.hasClass('slick-slider')) {
+                curList.slick('unslick');
+            }
+        });
+
+        $('.career-prefs').each(function() {
+            $('.career-prefs').mCustomScrollbar('destroy');
+        });
+
+        $('.widgets-tabs').each(function() {
+            $('.widgets-tabs').mCustomScrollbar('destroy');
+        });
+
+        $('.widgets-clients-list').each(function() {
+            $('.widgets-clients-list').mCustomScrollbar('destroy');
+        });
+
+        $('.service-who-list').each(function() {
+            $('.service-who-list').mCustomScrollbar('destroy');
+        });
+    } else {
+        $('.main-achives').each(function() {
+            $('.main-achives').mCustomScrollbar({
+                axis: 'x'
+            });
+        });
+
+        $('.main-services-list').each(function() {
+            var curList = $(this);
+            if (!curList.hasClass('slick-slider')) {
+                curList.slick({
+                    infinite: false,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: false,
+                    dots: false,
+                    adaptiveHeight: true,
+                    variableWidth: true
+                });
+            }
+        });
+
+        $('.career-prefs').each(function() {
+            $('.career-prefs').mCustomScrollbar({
+                axis: 'x'
+            });
+        });
+
+        $('.widgets-tabs').each(function() {
+            $('.widgets-tabs').mCustomScrollbar({
+                axis: 'x'
+            });
+        });
+
+        $('.widgets-clients-list').each(function() {
+            $('.widgets-clients-list').mCustomScrollbar({
+                axis: 'x'
+            });
+        });
+
+        $('.service-who-list').each(function() {
+            $('.service-who-list').mCustomScrollbar({
+                axis: 'x'
+            });
+        });
+    }
 
 });
 

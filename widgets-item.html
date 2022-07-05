@@ -31,7 +31,16 @@
                             <li><a href="#">Карьера</a></li>
                             <li><a href="#">Контакты</a></li>
                         </ul>
+                        <div class="nav-contacts">
+                            <div class="nav-contacts-item"><a href="tel:+74993808030">+7 499 380 80 30</a></div>
+                            <div class="nav-contacts-item"><a href="mailto:welcome@ingru.ru">welcome@ingru.ru</a></div>
+                            <div class="nav-contacts-social">
+                                <a href="#" target="_blank"><svg><use xlink:href="images/sprite.svg#footer-social-yt"></use></svg></a>
+                                <a href="#" target="_blank"><svg><use xlink:href="images/sprite.svg#footer-social-vk"></use></svg></a>
+                            </div>
+                        </div>
                     </nav>
+                    <a href="#" class="burger-link"><svg><use xlink:href="images/sprite.svg#burger-link"></use></svg><svg><use xlink:href="images/sprite.svg#burger-close"></use></svg></a>
                 </div>
             </header>
 
@@ -50,7 +59,7 @@
                                 <div class="main-widgets-item-price-free-text">первых дней бесплатно</div>
                             </div>
                         </div>
-                        <div class="main-widgets-item-btn"><a href="#" class="btn">Установить для amoCRM</a></div>
+                        <div class="main-widgets-item-btn"><a href="#" class="btn big">Установить для amoCRM</a></div>
                     </div>
                 </div>
             </div>
@@ -58,6 +67,21 @@
 
             <!-- container -->
             <div class="container">
+
+                <!-- page menu mobile -->
+                <div class="page-menu-mobile">
+                    <div class="page-menu-mobile-title">Содержание</div>
+                    <ol>
+                        <li class="active"><a href="#page-section-1">Как это работает</a></li>
+                        <li><a href="#page-section-2">Видео инструкция</a></li>
+                        <li><a href="#page-section-3">Кейс использования</a></li>
+                        <li><a href="#page-section-4">Обновления</a></li>
+                        <li><a href="#page-section-5">Отзывы</a></li>
+                        <li><a href="#page-section-6">Клиенты</a></li>
+                        <li><a href="#page-section-7">Установить виджет</a></li>
+                    </ol>
+                </div>
+                <!-- page menu END -->
 
                 <div class="widget-how" id="page-section-1">
                     <h3>Как это работает</h3>
@@ -115,7 +139,7 @@
                                 <div class="video-block-link-header">Видеоинструкция</div>
                                 <div class="video-block-link-title">Автодействия с полем «Дата»</div>
                                 <div class="video-block-link-view">Смотреть</div>
-                                <svg><use xlink:href="images/sprite.svg#video-block-link"></use></svg>
+                                <div class="video-block-link-icon"><svg><use xlink:href="images/sprite.svg#video-block-link"></use></svg></div>
                             </a>
                             <div class="video-block-more"><a href="#"><svg><use xlink:href="images/sprite.svg#video-block-more-gray"></use></svg>Больше видео на нашем Youtube-канале</a></div>
                         </div>
@@ -326,50 +350,52 @@
                         <!-- widget clients -->
                         <div class="widget-clients">
                             <div class="widgets-clients-list">
-                                <div class="widgets-clients-item">
-                                    <a href="#" class="widgets-clients-item-inner">
-                                        <img src="files/widgets-clients-01.png" alt="" />
-                                    </a>
-                                </div>
-                                <div class="widgets-clients-item">
-                                    <a href="#" class="widgets-clients-item-inner">
-                                        <img src="files/widgets-clients-02.png" alt="" />
-                                    </a>
-                                </div>
-                                <div class="widgets-clients-item">
-                                    <a href="#" class="widgets-clients-item-inner">
-                                        <img src="files/widgets-clients-03.png" alt="" />
-                                    </a>
-                                </div>
-                                <div class="widgets-clients-item">
-                                    <a href="#" class="widgets-clients-item-inner">
-                                        <img src="files/widgets-clients-05.png" alt="" />
-                                    </a>
-                                </div>
-                                <div class="widgets-clients-item">
-                                    <a href="#" class="widgets-clients-item-inner">
-                                        <img src="files/widgets-clients-06.png" alt="" />
-                                    </a>
-                                </div>
-                                <div class="widgets-clients-item">
-                                    <a href="#" class="widgets-clients-item-inner">
-                                        <img src="files/widgets-clients-07.png" alt="" />
-                                    </a>
-                                </div>
-                                <div class="widgets-clients-item">
-                                    <a href="#" class="widgets-clients-item-inner">
-                                        <img src="files/widgets-clients-09.png" alt="" />
-                                    </a>
-                                </div>
-                                <div class="widgets-clients-item">
-                                    <a href="#" class="widgets-clients-item-inner">
-                                        <img src="files/widgets-clients-10.png" alt="" />
-                                    </a>
-                                </div>
-                                <div class="widgets-clients-item">
-                                    <a href="#" class="widgets-clients-item-inner">
-                                        <img src="files/widgets-clients-11.png" alt="" />
-                                    </a>
+                                <div class="widgets-clients-list-inner">
+                                    <div class="widgets-clients-item">
+                                        <a href="#" class="widgets-clients-item-inner">
+                                            <img src="files/widgets-clients-01.png" alt="" />
+                                        </a>
+                                    </div>
+                                    <div class="widgets-clients-item">
+                                        <a href="#" class="widgets-clients-item-inner">
+                                            <img src="files/widgets-clients-02.png" alt="" />
+                                        </a>
+                                    </div>
+                                    <div class="widgets-clients-item">
+                                        <a href="#" class="widgets-clients-item-inner">
+                                            <img src="files/widgets-clients-03.png" alt="" />
+                                        </a>
+                                    </div>
+                                    <div class="widgets-clients-item">
+                                        <a href="#" class="widgets-clients-item-inner">
+                                            <img src="files/widgets-clients-05.png" alt="" />
+                                        </a>
+                                    </div>
+                                    <div class="widgets-clients-item">
+                                        <a href="#" class="widgets-clients-item-inner">
+                                            <img src="files/widgets-clients-06.png" alt="" />
+                                        </a>
+                                    </div>
+                                    <div class="widgets-clients-item">
+                                        <a href="#" class="widgets-clients-item-inner">
+                                            <img src="files/widgets-clients-07.png" alt="" />
+                                        </a>
+                                    </div>
+                                    <div class="widgets-clients-item">
+                                        <a href="#" class="widgets-clients-item-inner">
+                                            <img src="files/widgets-clients-09.png" alt="" />
+                                        </a>
+                                    </div>
+                                    <div class="widgets-clients-item">
+                                        <a href="#" class="widgets-clients-item-inner">
+                                            <img src="files/widgets-clients-10.png" alt="" />
+                                        </a>
+                                    </div>
+                                    <div class="widgets-clients-item">
+                                        <a href="#" class="widgets-clients-item-inner">
+                                            <img src="files/widgets-clients-11.png" alt="" />
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -393,7 +419,7 @@
                                 <div class="main-widgets-item-price-free-text">первых дней бесплатно</div>
                             </div>
                         </div>
-                        <div class="main-widgets-item-btn"><a href="#" class="btn">Установить для amoCRM</a></div>
+                        <div class="main-widgets-item-btn"><a href="#" class="btn big">Установить для amoCRM</a></div>
                     </div>
                 </div>
 
@@ -404,7 +430,7 @@
                     <!-- widgets others list -->
                     <div class="widgets-others-list">
                         <div class="widgets-others-item green with-label">
-                            <div class="widgets-item-inner">
+                            <a href="#" class="widgets-item-inner">
                                 <div class="widgets-item-text">
                                     <div class="widgets-item-type">Процессы</div>
                                     <h5>Объединение полей в группу</h5>
@@ -418,12 +444,12 @@
                                         <div class="widgets-item-price-free-text">первых дней бесплатно</div>
                                     </div>
                                 </div>
-                                <div class="widgets-item-btn"><a href="#" class="btn green">Установить для amoCRM</a></div>
-                            </div>
+                                <div class="widgets-item-btn"><span class="btn green">Установить для amoCRM</span></div>
+                            </a>
                         </div>
 
                         <div class="widgets-others-item purple with-label">
-                            <div class="widgets-item-inner">
+                            <a href="#" class="widgets-item-inner">
                                 <div class="widgets-item-text">
                                     <div class="widgets-item-type">Интеграции</div>
                                     <h5>Интеграция с Gmail</h5>
@@ -438,12 +464,12 @@
                                         <div class="widgets-item-price-free-text">первых дней бесплатно</div>
                                     </div>
                                 </div>
-                                <div class="widgets-item-btn"><a href="#" class="btn purple">Установить для amoCRM</a></div>
-                            </div>
+                                <div class="widgets-item-btn"><span class="btn purple">Установить для amoCRM</span></div>
+                            </a>
                         </div>
 
                         <div class="widgets-others-item orange with-label">
-                            <div class="widgets-item-inner">
+                            <a href="#" class="widgets-item-inner">
                                 <div class="widgets-item-text">
                                     <div class="widgets-item-type">Подсказки</div>
                                     <h5>Реквизиты</h5>
@@ -458,12 +484,12 @@
                                         <div class="widgets-item-price-free-text">первых дней бесплатно</div>
                                     </div>
                                 </div>
-                                <div class="widgets-item-btn"><a href="#" class="btn orange">Установить для amoCRM</a></div>
-                            </div>
+                                <div class="widgets-item-btn"><span class="btn orange">Установить для amoCRM</span></div>
+                            </a>
                         </div>
 
                         <div class="widgets-others-item red with-label">
-                            <div class="widgets-item-inner">
+                            <a href="#" class="widgets-item-inner">
                                 <div class="widgets-item-text">
                                     <div class="widgets-item-type">Процессы</div>
                                     <h5>Объединение полей в группу</h5>
@@ -477,12 +503,12 @@
                                         <div class="widgets-item-price-free-text">первых дней бесплатно</div>
                                     </div>
                                 </div>
-                                <div class="widgets-item-btn"><a href="#" class="btn green">Установить для amoCRM</a></div>
-                            </div>
+                                <div class="widgets-item-btn"><span class="btn green">Установить для amoCRM</span></div>
+                            </a>
                         </div>
 
                         <div class="widgets-others-item purple">
-                            <div class="widgets-item-inner">
+                            <a href="#" class="widgets-item-inner">
                                 <div class="widgets-item-text">
                                     <div class="widgets-item-type">Интеграции</div>
                                     <h5>Интеграция с Gmail</h5>
@@ -495,12 +521,12 @@
                                         <div class="widgets-item-price-free-text">первых дней бесплатно</div>
                                     </div>
                                 </div>
-                                <div class="widgets-item-btn"><a href="#" class="btn purple">Установить для amoCRM</a></div>
-                            </div>
+                                <div class="widgets-item-btn"><span class="btn purple">Установить для amoCRM</span></div>
+                            </a>
                         </div>
 
                         <div class="widgets-others-item orange with-label">
-                            <div class="widgets-item-inner">
+                            <a href="#" class="widgets-item-inner">
                                 <div class="widgets-item-text">
                                     <div class="widgets-item-type">Подсказки</div>
                                     <h5>Реквизиты</h5>
@@ -515,8 +541,8 @@
                                         <div class="widgets-item-price-free-text">первых дней бесплатно</div>
                                     </div>
                                 </div>
-                                <div class="widgets-item-btn"><a href="#" class="btn orange">Установить для amoCRM</a></div>
-                            </div>
+                                <div class="widgets-item-btn"><span class="btn orange">Установить для amoCRM</span></div>
+                            </a>
                         </div>
                     </div>
                     <!-- widgets list END -->
