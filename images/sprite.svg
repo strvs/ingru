@@ -81,4 +81,10 @@
         <rect x="26.2539" y="27.8745" width="32" height="3" transform="rotate(-135 26.2539 27.8745)" fill="#222222" />
     </symbol>
 
+    <symbol viewBox="0 0 24 24" id="widget-updates-more">
+        <circle cx="12" cy="12" r="12" transform="rotate(90 12 12)" fill="white" />
+        <path d="M7 10L17 10L12 17L7 10Z" fill="#93979B" />
+        <path d="M7 10L17 10L12 17L7 10Z" fill="#85888B" />
+    </symbol>
+
 </svg>

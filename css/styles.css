@@ -79,8 +79,8 @@ ol ol li::before {content:counter(point)'.'counter(subpoint); counter-increment:
 .btn.red::after {border-color:#222222}
 
 .btn.rose {background:#e43f6f; color:#ffffff}
-.btn.rose:hover {background:#ee1657; color:#ffffff}
-.btn.rose:active {background:#e01451; color:#ffffff}
+.btn.rose:hover {background:#d32e5e; color:#ffffff}
+.btn.rose:active {background:#c01a4b; color:#ffffff}
 .btn.rose::after {border-color:#222222}
 
 .form-input {position:relative; margin:24px 0}
@@ -542,17 +542,17 @@ label.error {display:block; margin:8px 0 0 24px; font-size:14px; line-height:14p
 .widgets-clients-list {margin:22px -12px 0 -12px; font-size:0; line-height:0; letter-spacing:-1px}
 .widgets-clients-item {display:inline-block; vertical-align:top; width:25%; padding:24px 12px 0 12px}
 .widgets-clients-item-inner {display:block; height:112px; text-align:center; line-height:112px; background:#eef1f3; border-radius:10px}
+.widgets-clients-list .slick-slide .widgets-clients-item-inner img,
 .widgets-clients-item-inner img {display:inline-block; vertical-align:middle; max-height:100%}
 
 @media (max-width:1191px) {
     .widgets-clients {margin:64px 0 0 0}
-    .widgets-clients-list {margin:24px -16px 0 -16px}
-    .widgets-clients-list-inner {display:inline-block; vertical-align:top; width:531px; padding:0 12px}
-    .widgets-clients-item {padding:8px 4px 0 4px}
+    .widgets-clients-list {margin:24px 2px 0 -4px}
+    .widgets-clients-list-inner {display:block}
+    .widgets-clients-list-inner .slick-list {overflow:visible !important}
+    .widgets-clients-item {width:100% !important; padding:8px 4px 0 4px}
     .widgets-clients-item-inner {height:48px; line-height:48px}
     .widgets-clients-item-inner img {max-width:50%; max-height:50%; border-radius:4px}
-    .widgets-clients-list .mCSB_horizontal.mCSB_inside > .mCSB_container {margin:0}
-    .widgets-clients-list .mCSB_scrollTools.mCSB_scrollTools_horizontal {opacity:0 !important}
 }
 
 .page-widgets {padding-top:64px; padding-bottom:64px}
@@ -964,17 +964,28 @@ h3+.video-block {margin-top:48px}
 .widget-updates-item::after {content:""; display:block; clear:both}
 .widget-updates-item-date {float:left; color:#93979b}
 .widget-updates-item-text {margin:0 0 0 145px}
+.widget-updates-more {display:none}
 
 @media (max-width:1191px) {
-    .widget-updates {margin:80px 0; padding:48px 16px 59px 16px; border-radius:24px}
+    .widget-updates {margin:80px 0; padding:48px 16px 50px 16px; border-radius:24px}
     .widget-updates h2 {margin:0}
     .widget-updates-list {margin:32px 0 0 0; max-height:none; overflow:visible}
     .widget-updates-list.with-top::before {display:none}
     .widget-updates-list.with-bottom::after {display:none}
     .widget-updates-item {padding:0; margin:32px 0 0 0}
     .widget-updates-item:first-child {margin:0}
+    .widget-updates-item:nth-child(n+4) {display:none}
+    .widget-updates.open .widget-updates-item:nth-child(n+4) {display:block}
     .widget-updates-item-date {float:none}
     .widget-updates-item-text {margin:8px 0 0 0}
+    .widget-updates-more {font-weight:600; font-size:16px; line-height:24px}
+    .widget-updates-more.visible {display:block; margin:32px 0 0 0}
+    .widget-updates-more a {color:#93979b; text-decoration:none}
+    .widget-updates-more a svg {display:inline-block; vertical-align:middle; width:24px; height:24px; margin:-2px 8px 0 0; fill:none}
+    .widget-updates.open .widget-updates-more a svg {transform:rotate(-180deg)}
+    .widget-updates-more a span+span {display:none}
+    .widget-updates.open .widget-updates-more a span {display:none}
+    .widget-updates.open .widget-updates-more a span+span {display:inline}
 }
 
 .widget-reviews {margin:48px -96px 48px 0; font-size:0; line-height:0; letter-spacing:-1px; white-space:nowrap; position:relative; overflow:hidden}
@@ -1337,10 +1348,9 @@ h3+.video-block {margin-top:48px}
 .career-pref-inner h6 {margin:0}
 
 @media (max-width:1191px) {
-    .career-prefs {margin:48px -16px -48px -16px; white-space:nowrap}
-    .career-pref {width:284px; margin:0 16px 48px 0; padding:0; white-space:normal}
-    .career-pref:first-child {margin:0 16px 48px 16px}
-    .career-pref-inner {padding:24px 0 30px 24px}
+    .career-prefs {margin:48px -16px -48px 0px; white-space:nowrap}
+    .career-pref {margin:0 16px 48px 0; padding:0; white-space:normal}
+    .career-pref-inner {width:308px; padding:24px 0 30px 24px}
     .career-pref-inner::before {margin:0 0 16px 0}
     .career-pref:nth-child(2) .career-pref-inner br {display:none}
     .career-prefs .mCSB_horizontal.mCSB_inside > .mCSB_container {margin:0}

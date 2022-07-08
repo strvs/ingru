@@ -239,6 +239,17 @@ $(document).ready(function() {
         }
     });
 
+    $('.widget-updates').each(function() {
+        if ($('.widget-updates-item').length > 3) {
+            $('.widget-updates-more').addClass('visible');
+        }
+    });
+
+    $('.widget-updates-more a').click(function(e) {
+        $('.widget-updates').toggleClass('open');
+        e.preventDefault();
+    });
+
 });
 
 $(window).on('load resize', function() {
@@ -376,15 +387,21 @@ $(window).on('load resize', function() {
         });
 
         $('.career-prefs').each(function() {
-            $('.career-prefs').mCustomScrollbar('destroy');
+            var curList = $(this);
+            if (curList.hasClass('slick-slider')) {
+                curList.slick('unslick');
+            }
         });
 
         $('.widgets-tabs').each(function() {
             $('.widgets-tabs').mCustomScrollbar('destroy');
         });
 
-        $('.widgets-clients-list').each(function() {
-            $('.widgets-clients-list').mCustomScrollbar('destroy');
+        $('.widgets-clients-list-inner').each(function() {
+            var curList = $(this);
+            if (curList.hasClass('slick-slider')) {
+                curList.slick('unslick');
+            }
         });
 
         $('.service-who-list').each(function() {
@@ -413,9 +430,18 @@ $(window).on('load resize', function() {
         });
 
         $('.career-prefs').each(function() {
-            $('.career-prefs').mCustomScrollbar({
-                axis: 'x'
-            });
+            var curList = $(this);
+            if (!curList.hasClass('slick-slider')) {
+                curList.slick({
+                    infinite: false,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: false,
+                    dots: false,
+                    adaptiveHeight: true,
+                    variableWidth: true
+                });
+            }
         });
 
         $('.widgets-tabs').each(function() {
@@ -424,10 +450,19 @@ $(window).on('load resize', function() {
             });
         });
 
-        $('.widgets-clients-list').each(function() {
-            $('.widgets-clients-list').mCustomScrollbar({
-                axis: 'x'
-            });
+        $('.widgets-clients-list-inner').each(function() {
+            var curList = $(this);
+            if (!curList.hasClass('slick-slider')) {
+                curList.slick({
+                    infinite: false,
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    row: 3,
+                    slidesPerRow: 3,
+                    arrows: false,
+                    dots: false
+                });
+            }
         });
 
         $('.service-who-list').each(function() {
