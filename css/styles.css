@@ -1154,10 +1154,10 @@ h3+.video-block {margin-top:48px}
 .window-open,
 .window-open body {overflow:hidden; position:fixed; left:0; top:0; right:0; bottom:0}
 
-.window {position:fixed; left:0; top:0; right:0; bottom:0; overflow:hidden; z-index:999; background:rgba(0, 0, 0, 0.7); text-align:center}
+.window {position:fixed; left:0; top:0; right:0; bottom:0; overflow:auto; z-index:999; background:rgba(0, 0, 0, 0.7); text-align:center}
 .window::before {content:""; display:inline-block; height:100%; vertical-align:middle}
 .window-loading {position:absolute; left:50%; top:50%; width:91px; height:91px; margin:-45px 0 0 -45px; background:url(../images/loading.svg) no-repeat center}
-.window-container {display:inline-block; vertical-align:middle; position:relative; text-align:left; background:#ffffff; transition:transform 0.3s ease-out; transform:scale(1); border-radius:32px; box-shadow:0px 24px 64px -12px rgba(5, 23, 62, 0.05)}
+.window-container {display:inline-block; vertical-align:middle; position:relative; margin:40px 0; text-align:left; background:#ffffff; transition:transform 0.3s ease-out; transform:scale(1); border-radius:32px; box-shadow:0px 24px 64px -12px rgba(5, 23, 62, 0.05)}
 .window-container-preload {transform:scale(1)}
 .window-content {background:#ffffff; position:relative; overflow:auto}
 .window-close {display:block; position:absolute; right:24px; top:24px; width:32px; height:32px}
@@ -1179,6 +1179,18 @@ h3+.video-block {margin-top:48px}
     .window-success h2 {max-width:none}
     .window-success-text {max-width:none; font-size:20px; line-height:25px}
     .window-success-btn {max-width:none}
+}
+
+.window-consult {width:680px; padding:48px 30px 56px 30px; background:#eef1f3; border-radius:32px}
+.window-consult h2 {margin:0; text-align:center}
+.window-consult-text {margin:32px auto 0 auto; max-width:552px; font-size:22px; line-height:31px; text-align:center}
+.window-consult-form {margin:40px auto 0 auto; max-width:552px}
+.window-consult-form form {margin:0; padding:0}
+
+@media (max-width:1191px) {
+    .window-consult {width:328px; padding:48px 16px 56px 16px}
+    .window-consult-text {max-width:none; font-size:20px; line-height:25px}
+    .window-consult-form {margin:32px 0 0 0; max-width:none}
 }
 
 .article-header {background:#eef1f3; padding:64px 0}
